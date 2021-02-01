@@ -8,22 +8,29 @@ Wrangle data and train a model using different libraries like you're a real data
 
 For this project, there will be no "walkthrough", you will be free to do your own machine learning, as long as you follow these guidelines:
 
-1. Choose **any** dataset from http://archive.ics.uci.edu/ml/index.php or [kaggle datasets](https://www.kaggle.com/datasets) or [data.gouv](https://www.data.gouv.fr/fr/)
-2. Download the dataset file and upload to Databricks. If you want to use another dataset, it's okay as long as it's public.
-3. Explore it using DataFrames, including **at least** the following steps:
+1. Choose **any** dataset from http://archive.ics.uci.edu/ml/index.php or [kaggle datasets](https://www.kaggle.com/datasets) or [data.gouv](https://www.data.gouv.fr/fr/) or outside. I need to have access to the dataset to validate the project. It might not be public.
+2. Download the dataset file and upload to Databricks. If you want to use another dataset, it's okay as long as I can access it.
+3. Do a preliminary exploration using pandas on a sample of the dataset (optional but recommended)
+  1. You might want to start making hypothesis.
+  2. Please worry about the data quality and any kid of bias within
+  3. PLEASE WORRY ABOUT BIAS IN DATA
+  4. Make a **pretty** plot about any kind of intuition.
+4. Explore it using Spark DataFrames, including **at least** the following steps:
   1. Reading the file into a DataFrame
   2. Running some aggregations and explorations using DataFrame functions
-4. Your solution notebook must have a part using MLlib, including **at least** the following steps:
+  3. The fancier, the better
+5. Your solution notebook must have a part using MLlib, including **at least** the following steps:
   1. Converting into MLlib matrix
   2. Applying some statistics with the  MLlib's API
   3. Learning a classification or regression model
   4. Applying the model to the test data and computing the errors
-5. You'll also train another model using Pipelines:
+6. You'll also train another model using Pipelines:
   1. Creating a pipeline with **at least** one feature extraction/manipulation and one model estimator
   2. Fitting the pipeline to the training data
   3. Applying the model to the test data and computing the errors
-6. Finally you should try to apply a third party ML library for instance [tune scikit-learn meta-parameters using spark](https://docs.databricks.com/spark/latest/mllib/third-party-libraries.html#scikit-learn).
-7. No report needed !! Just add some comment as part of the Notebook. The notebook should be self-sufficient. I'm expecting a short written analysis (and you should know that "We found nothing after testing *this* and *that* is already a valuable result), but also some plots. You can use any library (matplotlib, bokeh...). Just be sure to [watch this video first](https://www.youtube.com/watch?v=xAoljeRJ3lU)
+7. Finally you should try to apply a third party ML library for instance [tune scikit-learn meta-parameters using spark](https://docs.databricks.com/spark/latest/mllib/third-party-libraries.html#scikit-learn). You can also use tensorflow or pytorch. The endpoint here is to have you mix different framework on the same project.
+
+8. No report needed !! Just add some comment as part of the Notebook. The notebook should be self-sufficient. I'm expecting a short written analysis (and you should know that "We found nothing after testing *this* and *that*" is already a valuable result), but also some plots. You can use any library (matplotlib, bokeh...). Just be sure to [watch this video first](https://www.youtube.com/watch?v=xAoljeRJ3lU)
 
 ## Notes: 
   - Don't forget to split your data into training and test (and validation if you want) sets
